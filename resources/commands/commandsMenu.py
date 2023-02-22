@@ -62,3 +62,25 @@ def comandos(update, context):
 def hola(update, context):
     defineLogs().info(f"El usuario {update.effective_user['username']}, consulto por Hola")
     context.bot.send_message(chat_id=update.effective_chat.id, text=f"Hola {update.effective_user['username']}, soy guarson2, un bot creado para LMD2 con la intencion de dejar guardado todas las configuraciones de armas de Warzone 2.0.")
+
+
+def getListStats():     # Return a string with a list of stats commands
+    return ("\n\nStats:"
+            + "\n-/Berisso1"
+            + "\n-/Bolsonaro"
+            + "\n-/Hormigator"
+            + "\n-/Leko"
+            # + "\n-/Luquitas"
+            + "\n-/Mandalorian"
+            # + "\n-/Pablo"
+            # + "\n-/Rapax"
+            + "\n\nKD:"
+            + "\n-/Berisso1KD"
+            + "\n-/BolsonaroKD"
+            + "\n-/HormigatorKD"
+            + "\n-/LekoKD"
+            # + "\n-/LuquitasKD"
+            + "\n-/MandalorianKD"
+            # + "\n-/PabloKD"
+            # + "\n-/RapaxKD"
+            )
