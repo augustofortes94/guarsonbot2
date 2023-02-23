@@ -38,10 +38,12 @@ def setString(data):
         cadena = cadena + '-' + data['ammunition'] + '\n'
     if data['reargrip'] is not None:
         cadena = cadena + '-' + data['reargrip'] + '\n'
-    if data['perk'] is not None:
-        cadena = cadena + '-' + data['perk'] + '\n'
-    if data['perk2'] is not None:
-        cadena = cadena + '-' + data['perk2'] + '\n'
+    if data['guard'] is not None:
+        cadena = cadena + '-' + data['guard'] + '\n'
+    if data['comb'] is not None:
+        cadena = cadena + '-' + data['comb'] + '\n'
+    if data['receiver'] is not None:
+        cadena = cadena + '-' + data['receiver'] + '\n'
     if data['alternative'] is not None:
         cadena = cadena + '\n' + data['alternative'] + '\n'
     if data['alternative2'] is not None:
@@ -61,7 +63,6 @@ def getListCommands(category):  # Return list commands of a category
 def getListWeaponCommands():  # Return list commands of a category
     headers = {'Authorization': 'Bearer ' + getToken()}
     data = requests.get(os.getenv('apiurl') + 'api/commands/?warzone_version=' + os.getenv('warzone_version'), headers=headers).json()
-    print(data)
     
     list_commands = '\nFusiles de Asalto:'
     for command in data['categories']['Fusiles de Asalto']:
@@ -108,7 +109,6 @@ def getLobbyFromApi(mode):
 
 def getWeaponFromApi(command, headers):
     data = requests.get(os.getenv('apiurl') + 'api/' + os.getenv('warzone_version') + '/weapons/?command=' + command, headers=headers).json()
-    print(data)
     try:
         return setString(data['weapons'][0])
     except:
