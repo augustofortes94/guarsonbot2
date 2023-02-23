@@ -61,6 +61,7 @@ def getListCommands(category):  # Return list commands of a category
 def getListWeaponCommands():  # Return list commands of a category
     headers = {'Authorization': 'Bearer ' + getToken()}
     data = requests.get(os.getenv('apiurl') + 'api/commands/?warzone_version=' + os.getenv('warzone_version'), headers=headers).json()
+    print(data)
     
     list_commands = '\nFusiles de Asalto:'
     for command in data['categories']['Fusiles de Asalto']:
@@ -107,6 +108,7 @@ def getLobbyFromApi(mode):
 
 def getWeaponFromApi(command, headers):
     data = requests.get(os.getenv('apiurl') + 'api/' + os.getenv('warzone_version') + '/weapons/?command=' + command, headers=headers).json()
+    print(data)
     try:
         return setString(data['weapons'][0])
     except:
