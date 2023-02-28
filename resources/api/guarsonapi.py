@@ -68,6 +68,7 @@ def getListWeaponCommands():  # Return list commands of a category
     for command in data['categories']['Fusiles de Asalto']:
         list_commands = list_commands + '\n-/' + command['name']
 
+    list_commands = list_commands + '\n\nFusiles de Combate:'
     for command in data['categories']['Fusiles de Combate']:
         list_commands = list_commands + '\n-/' + command['name']
 
