@@ -56,6 +56,18 @@ dp.add_handler(CommandHandler("Comandos", comandos))
 dp.add_handler(CommandHandler("Hola", hola))
 
 
+# ARMAS
+dp.add_handler(CommandHandler("Bryson", bryson))
+
+dp.add_handler(CommandHandler("Kastov", kastov))
+
+dp.add_handler(CommandHandler("Lachmann", lachmann))
+
+dp.add_handler(CommandHandler("Lockwood", lockwood))
+
+dp.add_handler(CommandHandler("TAQ", taq))
+
+
 # COMANDOS DINAMICOS
 dp.add_handler(MessageHandler(Filters.regex(r"^/\w+$"), commandRegex))
 
