@@ -13,10 +13,6 @@ def lachmann(update, context):
     defineLogs().info(f"El usuario {update.effective_user['username']}, consulto por Lachmann")
     context.bot.send_message(chat_id=update.effective_chat.id, text="Lachmann:\n\n-Para el Fusil de Asalto Lachmann /Lachmann556\n-Para el Fusil de Combate Lachmann /Lachmann762\n-Para el Subfusil Lachmann /LachmannSub")
 
-def lachmann(update, context):
-    defineLogs().info(f"El usuario {update.effective_user['username']}, consulto por Lachmann")
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Lachmann:\n\n-Para el Fusil de Asalto Lachmann /Lachmann556\n-Para el Fusil de Combate Lachmann /Lachmann762\n-Para el Subfusil Lachmann /LachmannSub")
-
 def lockwood(update, context):
     defineLogs().info(f"El usuario {update.effective_user['username']}, consulto por Lockwood")
     context.bot.send_message(chat_id=update.effective_chat.id, text="Lockwood:\n\n-Para la Escopeta Lockwood /Lockwood300\n-Para el Fusil Tactico Lockwood /MK2")
