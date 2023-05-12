@@ -55,6 +55,10 @@ dp.add_handler(CommandHandler("Comandos", comandos))
 
 dp.add_handler(CommandHandler("Hola", hola))
 
+dp.add_handler(CommandHandler("Cod", codsignal))
+
+dp.add_handler(CommandHandler("Dolar", dolar))
+
 
 # ARMAS
 dp.add_handler(CommandHandler("Bryson", bryson))
