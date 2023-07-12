@@ -26,7 +26,7 @@ def commandRegex(update, context):
     headers = {'Authorization': 'Bearer ' + getToken()}
     data = requests.get(os.getenv('apiurl') + 'api/commands/?command=' + update['message']['text'][1:] + '&warzone_version=' + os.getenv('warzone_version'), headers=headers).json()
     mssg = context.bot.send_message
-    print(mssg)
+    defineLogs().info(mssg)
     try:
         if data['command']['category'] == 'Lobbys':
             mssg(chat_id=update.effective_chat.id, text=getLobbyTotalInfo(data['command']['parameter1'], data['command']['parameter2']))
